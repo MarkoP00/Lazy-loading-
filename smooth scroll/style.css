@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;900&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    background: linear-gradient(#4efae3,#38adf1);
+    background-repeat: no-repeat;
+    min-height: 210vh;
+}
+section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 80vh;
+}
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    transform: translateX(0px);
+    filter: blur(0px);
+}
+
+@media(prefers-reduced-motion){
+    .hidden {
+        transition: none;
+    }
+}
+.logos{
+    display:flex;
+    flex-direction: row;
+    text-align: center;
+}
+.logos img{
+    height: 300px;
+}
+.myTry{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.logo img{
+    height:300px;
+    margin-left: 20px;
+    
+}
+
+.logo:nth-child(2){
+    transition-delay: 200ms;
+}
+.logo:nth-child(3){
+    transition-delay: 400ms;
+}
+
+
+
+/* Btns something i have to try */
+
+.special {
+    background-color: lightgreen;
+    transform: translateY(-5px);
+    transition: all 0.3s;
+    border:none;
+}
+.active{
+    opacity: 0;
+}
